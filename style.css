@@ -1,0 +1,229 @@
+/* Base Reset and Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Substitua 'Roboto' pela fonte do seu projeto */
+    background-color: #f0f2f5; /* Cor de fundo suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Slide Container */
+.slide-container {
+    width: 90%; /* Largura do slide, ajuste conforme necessário */
+    max-width: 1200px; /* Largura máxima para desktops */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Header */
+.slide-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slide-header h1 {
+    color: #2c3e50; /* Cor escura para o título */
+    font-size: 2.5em;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.header-line {
+    width: 80%;
+    height: 3px;
+    background-color: #3498db; /* Linha azul destacada */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Main Content - Columns */
+.slide-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Espaçamento entre as colunas */
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fefefe; /* Fundo ligeiramente diferente para colunas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.column + .column {
+    border-left: 1px dashed #e0e0e0; /* Linhas pontilhadas entre colunas */
+}
+
+/* Icon and Title for Columns */
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 2.5em; /* Tamanho dos emojis/ícones */
+}
+
+.column h2 {
+    font-size: 1.6em;
+    margin: 0;
+    color: #34495e; /* Cor para os subtítulos das colunas */
+}
+
+/* Specific Column Styling */
+.challenge h2 { color: #e74c3c; } /* Vermelho para Desafio */
+.solution h2 { color: #27ae60; } /* Verde para Solução */
+.results h2 { color: #3498db; } /* Azul para Resultados */
+
+
+/* List Items */
+.column ul {
+    list-style: none; /* Remove bullet padrão */
+    padding: 0;
+    margin: 15px 0 0;
+    text-align: left; /* Alinha o texto da lista à esquerda */
+    width: 100%; /* Ocupa a largura total da coluna */
+}
+
+.column li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+    display: flex; /* Para alinhar o ícone com o texto */
+    align-items: flex-start;
+}
+
+.bullet-icon {
+    margin-right: 8px;
+    font-size: 1.2em;
+    line-height: 1.2; /* Ajusta a altura da linha do ícone */
+}
+
+/* Subtitle for columns */
+.subtitle {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Solution Flow Specifics */
+.solution-flow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    background-color: #ecf0f1; /* Fundo suave para o fluxo */
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace; /* Fonte monoespaçada para código/fluxo */
+    color: #2c3e50;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    justify-content: center;
+}
+
+.flow-step {
+    padding: 5px 10px;
+    background-color: #dbe4eb;
+    border-radius: 4px;
+    font-size: 0.95em;
+    white-space: nowrap; /* Impede quebra de linha */
+}
+
+.flow-arrow {
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+.ai-engine {
+    background-color: #a4d2b2; /* Verde mais claro para o motor AI */
+    font-weight: bold;
+}
+
+.search-example {
+    background-color: #cce7ff; /* Azul mais claro para o exemplo de busca */
+}
+
+.description {
+    font-size: 1em;
+    color: #666;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* Footer */
+.slide-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.footer-line {
+    width: 80%;
+    height: 2px;
+    background-color: #95a5a6; /* Linha cinza suave */
+    margin: 0 auto 15px;
+    border-radius: 1px;
+}
+
+.slide-footer p {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slide-content {
+        flex-direction: column;
+    }
+
+    .column + .column {
+        border-left: none;
+        border-top: 1px dashed #e0e0e0;
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+
+    .slide-container {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .slide-header h1 {
+        font-size: 1.8em;
+    }
+
+    .icon {
+        font-size: 2em;
+    }
+
+    .column h2 {
+        font-size: 1.4em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .column li, .description {
+        font-size: 0.9em;
+    }
+}
